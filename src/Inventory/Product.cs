@@ -34,21 +34,26 @@ namespace Inventory{
         public bool IsInStock(){
             return (this.quantity >0 ? true: false);
         }
-        public void UpdateStock(int quantity){
+        public bool UpdateStock(int quantity){
             int updatedQuantity = this.quantity + quantity;
             if(updatedQuantity <0){
                 System.Console.WriteLine("Cannot update the quantitiy");
+                return false;
             }
+            this.quantity = updatedQuantity;
             System.Console.WriteLine($"Updated quantity: {this.quantity}");
+            return true;
             
         }
 
-        public void UpdatePrice(double price){
+        public bool UpdatePrice(double price){
             if(price < 0){
                 System.Console.WriteLine("Price must be positive");
+                return false;
             }
             this.price=price;
             System.Console.WriteLine($"Update price: {this.price}");
+            return true;
         }
         private int id;
         private string name;
