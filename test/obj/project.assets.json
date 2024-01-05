@@ -1808,6 +1808,16 @@
         "build": {
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Inventory/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Inventory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inventory.dll": {}
+        }
       }
     }
   },
@@ -6103,10 +6113,16 @@
         "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Inventory/1.0.0": {
+      "type": "project",
+      "path": "../src/Inventory/Inventory.csproj",
+      "msbuildProject": "../src/Inventory/Inventory.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Inventory >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.2",
@@ -6145,7 +6161,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Mohi_shr\\Desktop\\c#\\Inventory\\src\\Inventory\\Inventory.csproj": {
+              "projectPath": "C:\\Users\\Mohi_shr\\Desktop\\c#\\Inventory\\src\\Inventory\\Inventory.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
